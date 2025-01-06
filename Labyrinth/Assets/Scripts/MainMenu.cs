@@ -1,25 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void StartGame ()
-    {
-        Debug.Log("Starting Game");
-        SceneManager.LoadScene(1);
-    }
 
+    [SerializeField] private string gameplaySceneName = "GameplayScene1";
+    
     public void QuitGame ()
     {
         Debug.Log("Quit Game");
         Application.Quit();
     }
 
-    public void OptionsOpen ()
+    public void StartHost ()
     {
-        Debug.Log("Quit Game");
-        Application.Quit();
+        Debug.Log("Starting Game");
+        NetworkManager.Singleton.StartHost();
+        Debug.Log("Starting Game 2");
+        NetworkManager.Singleton.SceneManager.LoadScene(gameplaySceneName, LoadSceneMode.Single);
+    }
+
+    public void StartServer ()
+    {
+        NetworkManager.Singleton.StartServer();
+        NetworkManager.Singleton.SceneManager.LoadScene(gameplaySceneName, LoadSceneMode.Single);
+    }
+
+    public void StartClient ()
+    {
+        NetworkManager.Singleton.StartClient();
+    }
+
+    public void StartGame ()
+    {
+        Debug.Log("Starting Game");
+        SceneManager.LoadScene(1);
     }
 }
