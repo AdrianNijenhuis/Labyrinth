@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    [SerializeField] private string gameplaySceneName = "GameplayScene1";
+    [SerializeField] private string gameplaySceneName = "CharacterSelect";
     
     public void QuitGame ()
     {

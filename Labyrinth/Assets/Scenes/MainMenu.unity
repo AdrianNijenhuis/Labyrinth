@@ -1489,7 +1489,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 781210836}
-    PlayerPrefab: {fileID: 2938558446413525583, guid: 4303b25362f6672489d47a6d0cff08e7, type: 3}
+    PlayerPrefab: {fileID: 0}
     NetworkPrefabs: []
     TickRate: 30
     ClientConnectionBufferTimeout: 10
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a72146b002a64398013991449d790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplaySceneName: GameplayScene1
+  gameplaySceneName: CharacterSelect
 --- !u!1 &1102363400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,7 +2519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44a72146b002a64398013991449d790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplaySceneName: GameplayScene1
+  gameplaySceneName: CharacterSelect
 --- !u!1 &1329905236
 GameObject:
   m_ObjectHideFlags: 0
